@@ -20,13 +20,13 @@ $password='';
 if( isset($_POST['name']) )
 {
     $name = $_POST['name'];
-    echo $name;
+  //  echo $name;
 }
 
 if( isset($_POST['password']) )
 {
     $password = $_POST['password'];
-echo 'dykmoremameheslo';
+//echo 'dykmoremameheslo';
 }
 
 
