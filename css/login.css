@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   padding: 10px;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(115deg, #255E69 10%, #AA3939 90%);
+  background: linear-gradient(115deg, #0d3a14 10%, #6f651c 90%);
 }
 .container {
   max-width: 800px;
