@@ -14,16 +14,42 @@ catch (PDOException $e) {
 }
 //---------------------------------
 
+$name='testUser';
+$password='';
+
+if( isset($_POST['name']) )
+{
+    $name = $_POST['name'];
+    echo $name;
+}
+
+if( isset($_POST['password']) )
+{
+    $password = $_POST['password'];
+echo 'dykmoremameheslo';
+}
 
 
-//$name = $_POST['name'];
-//$password =  $_POST['password'];
 $stmt = $conn->prepare("SELECT getHashByName(:name)");
-$stmt->execute(['name' => 'testUser']);
+$stmt->execute(['name' => $name]);
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 $firstKey = array_key_first($result);
 $result = $result[$firstKey];
-echo $result;
+//echo $result;
+echo '<br>';
+$validuser = password_verify($password, $result);
+
+if($validuser) {
+// TODO funkcionalita přihlašování
+}
+else{
+
+    echo '<script type="text/javascript">
+           window.location = "login.php?error=wrongpassword";
+      </script>';
+}
+
+
 
 //https://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
 ?>
