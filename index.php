@@ -60,7 +60,7 @@
                               Přidat anime
                           </button>
                       </li>
-                      <li><a href="#my_anime_list">Questy</a></li>
+                      <li><a href="#quests">Questy</a></li>
                       <li><a href="login.php" data-login>Přihlásit se</a></li>
                       <li><a href="register.php" data-login>Zaregistrovat se</a></li>
                   </ul>
@@ -77,7 +77,7 @@
           </div>
       </div>
     <div class="clearfix"><br></div>
-    <div class="mungus">
+    <div class="main" id="quests">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -94,8 +94,22 @@
         <div class="clearfix"><br></div>
 
         <div class="clearfix"><br></div>
-    </div>
 
+        <div class="list">
+            <ul>
+                <li><a href="#">Debut</a></li>
+                <li><a href="#">Checking</a></li>
+                <li><a href="#">Shootout Picnic</a></li>
+                <li><a href="#">Delivery from the Past</a></li>
+                <li><a href="#">Bad Rep Evidence</a></li>
+                <li><a href="#">Ice Cream Cones</a></li>
+                <li><a href="#">Postman Pat - Part 1</a></li>
+                <li><a href="#">Shaking up the Teller</a></li>
+                <li><a href="#">The Punisher - Part 1</a></li>
+                <li><a href="#">The Punisher - Part 2</a></li>
+            </ul>
+        </div>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function ()
             {
