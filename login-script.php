@@ -40,7 +40,7 @@ echo '<br>';
 $validuser = password_verify($password, $result);
 
 if($validuser) {
-
+// TODO funkcionalita přihlašování
 }
 else{
 
