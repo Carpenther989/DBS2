@@ -16,12 +16,12 @@
 
             <h3>Přihlášení</h3>
 
-            <form id="login_form" action="registration-script.php" method="POST">
+            <form id="login_form" action="login-script.php" method="POST">
                 <div class="form-row">
                     <div class="input-data">
                         <input type="text" required name="name"  autocomplete="new-password">
                         <div class="underline"></div>
-                        <label for="name">Email</label>
+                        <label for="name">Jméno</label>
                     </div>
 
                     
@@ -39,7 +39,7 @@
                 </div>
                     
             </form>
-
+            <!--
             <script>
                 document.addEventListener("DOMContentLoaded", function ()
                     {
@@ -63,7 +63,7 @@
                         );
                     }
                 );
-            </script>
+            </script> -->
         </div>
     </body>
 </html>
