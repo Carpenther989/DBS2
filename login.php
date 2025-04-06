@@ -13,7 +13,7 @@
             <div class="text">
                 <a href="index.php" style="text-decoration: none"><small>Zpátky domů</small></a>
             </div>
-            <form id="login_form" action="registration.php" method="POST">
+            <form id="login_form" action="registration-script.php" method="POST">
                 <div class="form-row">
                     <div class="input-data">
                         <input type="text" required name="name"  autocomplete="new-password">
