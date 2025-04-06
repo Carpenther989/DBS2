@@ -41,6 +41,7 @@ $validuser = password_verify($password, $result);
 
 if($validuser) {
 // TODO funkcionalita přihlašování
+    echo 'izi';
 }
 else{
 

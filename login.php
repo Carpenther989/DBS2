@@ -27,7 +27,7 @@
 
             <h3>Přihlášení</h3>
 
-            <form id="login_form" action="registration-script.php" method="POST">
+            <form id="login_form" action="login-script.php" method="POST">
                 <div class="form-row">
                     <div class="input-data">
                         <input type="text" required name="name"  autocomplete="new-password">
