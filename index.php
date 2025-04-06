@@ -92,7 +92,7 @@
             </div>
         </div>
         <div class="clearfix"><br></div>
-        <div class="row" id="my_anime_list"></div>
+
         <div class="clearfix"><br></div>
     </div>
 
