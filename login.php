@@ -11,19 +11,19 @@
     <body>
         <div class="container">
             <div class="text">
-                <a href="index.html" style="text-decoration: none"><small>Zpátky domů</small></a>
+                <a href="index.php" style="text-decoration: none"><small>Zpátky domů</small></a>
             </div>
             <form id="login_form" action="registration.php" method="POST">
                 <div class="form-row">
                     <div class="input-data">
-                        <input type="text" required id="name"  autocomplete="new-password">
+                        <input type="text" required name="name"  autocomplete="new-password">
                         <div class="underline"></div>
                         <label for="name">Email</label>
                     </div>
 
                     
                     <div class="input-data">
-                        <input type="password" required id="password"  autocomplete="new-password">
+                        <input type="password" required name="password"  autocomplete="new-password">
                         <div class="underline"></div>
                         <label for="password">Heslo</label>
                     </div>
