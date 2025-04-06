@@ -32,7 +32,7 @@
                     <div class="input-data">
                         <input type="text" required name="name"  autocomplete="new-password">
                         <div class="underline"></div>
-                        <label for="name">Email</label>
+                        <label for="name">Jméno</label>
                     </div>
 
                     
@@ -50,7 +50,7 @@
                 </div>
                     
             </form>
-
+            <!--
             <script>
                 document.addEventListener("DOMContentLoaded", function ()
                     {
@@ -74,7 +74,7 @@
                         );
                     }
                 );
-            </script>
+            </script> -->
         </div>
     </body>
 </html>
