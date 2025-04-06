@@ -39,6 +39,17 @@ $result = $result[$firstKey];
 echo '<br>';
 $validuser = password_verify($password, $result);
 
+if($validuser) {
+
+}
+else{
+
+    echo '<script type="text/javascript">
+           window.location = "login.php?error=wrongpassword";
+      </script>';
+}
+
+
 
 //https://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
 ?>
