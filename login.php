@@ -13,6 +13,9 @@
             <div class="text">
                 <a href="index.php" style="text-decoration: none"><small>Zpátky domů</small></a>
             </div>
+
+            <h3>Přihlášení</h3>
+
             <form id="login_form" action="registration-script.php" method="POST">
                 <div class="form-row">
                     <div class="input-data">

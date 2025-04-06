@@ -62,6 +62,7 @@
                       </li>
                       <li><a href="#my_anime_list">Questy</a></li>
                       <li><a href="login.php" data-login>Přihlásit se</a></li>
+                      <li><a href="register.php" data-login>Zaregistrovat se</a></li>
                   </ul>
               </div>
           </nav>
