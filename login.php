@@ -14,7 +14,7 @@
         if($_GET['error'] == 'wrongpassword')
         {
             echo '<script type="text/javascript">
-           window.confirm("špatné heslo xd");
+           window.confirm("něco se pokazilo (ノಠ益ಠ)ノ彡┻━┻");
                     </script>';
         }
     }
