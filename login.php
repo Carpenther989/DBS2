@@ -9,6 +9,17 @@
         <script src="js/userRecognition.js"></script>
     </head>
     <body>
+    <?php
+    if(isset($_GET["error"])){
+        if($_GET['error'] == 'wrongpassword')
+        {
+            echo '<script type="text/javascript">
+           window.confirm("špatné heslo xd");
+                    </script>';
+        }
+    }
+
+    ?>
         <div class="container">
             <div class="text">
                 <a href="index.php" style="text-decoration: none"><small>Zpátky domů</small></a>
