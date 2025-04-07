@@ -1,4 +1,9 @@
 <?php
+session_start();
+if($_SESSION["logged"]==true){
+
+}
+
 //------------------------------------
 $host = "localhost";
 $user = "frantaVomacka";
@@ -40,11 +45,16 @@ echo '<br>';
 $validuser = password_verify($password, $result);
 
 if($validuser) {
-// TODO funkcionalita přihlašování
-    echo 'izi';
+
+    //v session "logged" skladujeme jestli je uživatel přihlášen
+    $_SESSION["logged"]=true;
+  //  echo 'izi';
+    echo '<script type="text/javascript">
+           window.location = "index.php";
+      </script>';
 }
 else{
-
+    $_SESSION["logged"]=false;
     echo '<script type="text/javascript">
            window.location = "login.php?error=wrongpassword";
       </script>';
