@@ -46,30 +46,7 @@
 
     </form>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function ()
-            {
-                const form = document.getElementById('login_form');
 
-                form.addEventListener('submit', (e) =>
-                    {
-                        e.preventDefault();
-                        checkExistingUser(form.querySelector('input[id=name]').value, form.querySelector('input[id=password]').value).then(result =>
-                            {
-                                if(result)
-                                {
-                                    location.href = "index.html";
-                                } else {
-                                    alert('Bad password or name')
-                                }
-                            }
-                        );
-
-                    }
-                );
-            }
-        );
-    </script>
 </div>
 </body>
 </html>
