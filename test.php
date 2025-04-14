@@ -1,14 +1,28 @@
 <?php
-$str = 'testuser1@gmail.com';
+$str = 'gmail@gmail.com';
 $email = $str;
-if(filter_var($email, FILTER_VALIDATE_EMAIL)==true)
+if(validateMail($email))
 {
-  echo(emailToJson($email));
+    echo 'tru dat shit';
+}
+else{
+    echo 'vskutku s čepicí';
 }
 
 
 
-function  emailToJson($mail)
+
+function validateMail($mail) {
+    if(filter_var($mail, FILTER_VALIDATE_EMAIL)==true)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function  emailToJson($mail): string
 {
     $split = explode("@", $mail);
     $host = $split[0];
