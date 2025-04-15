@@ -1,4 +1,10 @@
 <?php
+session_start();
+if($_SESSION["logged"]==true){
+    echo '<script type="text/javascript">
+           window.location = "index.php";
+      </script>';
+}
 //------------------------------------
 $host = "localhost";
 $user = "frantaVomacka";
@@ -20,13 +26,11 @@ $password='';
 if( isset($_POST['name']) )
 {
     $name = $_POST['name'];
-  //  echo $name;
 }
 
 if( isset($_POST['password']) )
 {
     $password = $_POST['password'];
-//echo 'dykmoremameheslo';
 }
 
 
@@ -40,11 +44,15 @@ echo '<br>';
 $validuser = password_verify($password, $result);
 
 if($validuser) {
-// TODO funkcionalita přihlašování
-    echo 'izi';
+    //v session "logged" skladujeme jestli je uživatel přihlášen
+    $_SESSION["logged"]=true;
+  //  echo 'izi';
+    echo '<script type="text/javascript">
+           window.location = "index.php";
+      </script>';
 }
 else{
-
+    $_SESSION["logged"]=false;
     echo '<script type="text/javascript">
            window.location = "login.php?error=wrongpassword";
       </script>';
