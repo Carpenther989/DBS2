@@ -55,8 +55,8 @@
         <div id="menu">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="imagePage.php">Nahrát Obrázek</a></li>
-                <li><a href="#quests">Questy</a></li>
+                <li><a href="questSubmit.php">Nahrát Úkol</a></li>
+                <li><a href="index.php#quests">Úkoly</a></li>
                 <li><a href="login.php" data-login>Přihlásit se</a></li>
                 <li><a href="register.php" data-login>Zaregistrovat se</a></li>
             </ul>
@@ -85,12 +85,10 @@
     <div class="clearfix"><br></div>
 
     <div class="content">
-        <?php
+        <h2>Nahrát Úkol</h2>
 
-        echo "<h1>Nahrát Obrázek</h1>
-        <br>
         <div class='odstavec'>
-            <form action='image.php'>
+            <form action='questUpload.php'>
                 <br><br>
                 <label class='custom-file-upload'>
                     Vybrat soubor
@@ -101,10 +99,8 @@
                 <input type='submit' value='Nahrát' id='submit'>
             </form>
         </div>
-        
-        "
 
-        ?>
+
     </div>
 </div>
 <script>

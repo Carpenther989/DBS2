@@ -55,8 +55,8 @@
         <div id="menu">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="imagePage.php">Nahrát Obrázek</a></li>
-                <li><a href="#quests">Questy</a></li>
+                <li><a href="questSubmit.php">Nahrát Úkol</a></li>
+                <li><a href="index.php#quests">Úkoly</a></li>
                 <li><a href="login.php" data-login>Přihlásit se</a></li>
                 <li><a href="register.php" data-login>Zaregistrovat se</a></li>
             </ul>
