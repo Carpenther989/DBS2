@@ -88,7 +88,7 @@
         <h2>Nahrát Úkol</h2>
 
         <div class='odstavec'>
-            <form action='questUpload.php'>
+            <form action='questUpload.php' method="post" enctype="multipart/form-data">
 
                 <!--
                         Quest obsahuje:

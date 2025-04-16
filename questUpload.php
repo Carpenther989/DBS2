@@ -48,7 +48,7 @@ else{
 
 
 
-if (isset($_POST["submit"])) {
+
 
 // kontroluje zda byl soubor nahrán
     if (isset($_FILES["image"])) {
@@ -84,7 +84,7 @@ if (isset($_POST["submit"])) {
     else{
         $errorMsg[]= 'chybí obrázek';
     }
-}
+
 
 if($formOk == true){
 
@@ -98,7 +98,7 @@ if($formOk == true){
         $stmt->execute();
     }
     catch(PDOException $e){
-        echo $e->getMessage();
+
     }
 
 }
@@ -106,5 +106,5 @@ else{
 $errorMsg[]='problém při připojení do databáze';
 }
 
-var_dump($errorMsg);
+
 ?>
