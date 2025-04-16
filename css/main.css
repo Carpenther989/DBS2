@@ -155,11 +155,19 @@ body{
 
 }
 .custom-file-upload:hover {
-  color: #c2c2c2;
+  color: #acacac;
 }
 
 input[type="file"] {
   display: none;
+}
+
+label {
+  padding: 10px 0 0;
+}
+
+label:hover{
+  color: #acacac;
 }
 
 

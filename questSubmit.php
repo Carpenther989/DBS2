@@ -89,6 +89,35 @@
 
         <div class='odstavec'>
             <form action='questUpload.php'>
+
+                <!--
+                        Quest obsahuje:
+
+                        quest name
+                        quest xp
+                        quest reward - plain text
+                        obrázek
+
+                  -->
+
+                <label for="name"> Název úkolu: </label> <br>
+                <input type="text" name="name" id="name"> <br>
+
+
+                <label for="description"> Popis úkolu: </label> <br>
+                <input type="text" name="description" id="description"> <br>
+
+
+                <label for="xp"> Zkušenostní body za úkol: </label> <br>
+                <input type="number" min="1" max="100000" name="xp" id="xp"> <br>
+
+
+                <label for="reward"> Peníze za úkol: </label> <br>
+                <input type="number" min="1" max="2000000" name="reward" id="reward"> <br>
+
+
+
+
                 <br><br>
                 <label class='custom-file-upload'>
                     Vybrat soubor
