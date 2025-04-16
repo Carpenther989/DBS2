@@ -62,7 +62,7 @@ else{
           // kontrolue zda nahrání proběhlo v pořádku
         if($imageError === 0){
           //kontroluje za není obráek moc velký
-            if($image["size"] < 500000){
+            if($image["size"] < 5000000){
                 // deklarujeme že upload proběhl v pořádku a lze odeslat do databáze
                 $formOk = true;
                 $imageContent = file_get_contents($image["tmp_name"]);
