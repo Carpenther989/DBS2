@@ -86,6 +86,25 @@
 
     <div class="content">
         <?php
+        global $conn;
+        require_once('dbsConnect.php');
+        $questname = $_GET['questname'];
+        echo '<h1>'.$questname.'</h1> <br>';
+        echo 'popis :<br>';
+        $stmt = $conn->prepare("SELECT quest.questname AS 'name',
+ descr.descText AS 'popis',
+ quest.xp_earned AS 'xp',
+ quest.money_earned AS 'moni'
+ ,quest.preview_image AS 'img' 
+FROM  quest INNER JOIN descr ON quest.description_id=descr.id 
+WHERE quest.questname=:qwest;");
+        $stmt->bindParam(':qwest', $questname);
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        echo '<img src="data:image/jpeg;base64,'.base64_encode($result['img']).'"/><br>';
+        echo 'popis :<br>';
+        echo $result['popis'];
 
 
 
