@@ -33,7 +33,7 @@ else{
     $errorMsg[]="chybí heslo";
 }
 
-//todo implementovat registraci
+
 
 $stmt = $conn->prepare("SELECT usernameFree(:name)");
 $stmt->execute(['name' => $name]);
@@ -72,12 +72,13 @@ if($totalCheck == true)
 {
     $stmt = $conn->prepare("call newUser(:username,:password,:email)");
     $stmt->execute(['username' => $name, 'password' => $passwd, 'email' => $emailJson]);
+    $_SESSION['logged']=true;
+    $_SESSION['loggedName']=$name;
 }
 else{
     echo 'něco se domradlo';
     var_dump($errorMsg);
-    echo $passwd;
-    echo $email;
+
 }
 
 

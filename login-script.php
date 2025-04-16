@@ -46,6 +46,7 @@ $validuser = password_verify($password, $result);
 if($validuser) {
     //v session "logged" skladujeme jestli je uživatel přihlášen
     $_SESSION["logged"]=true;
+    $_SESSION['loggedName']=$name;
   //  echo 'izi';
     echo '<script type="text/javascript">
            window.location = "index.php";
