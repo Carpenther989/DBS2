@@ -55,11 +55,7 @@
               <div id="menu">
                   <ul>
                       <li><a href="index.php">Home</a></li>
-                      <li id="add-anime" class="visually-hidden">
-                          <button type="button" data-bs-toggle="modal" data-bs-target="#modal_addAnime" >
-                              Přidat anime
-                          </button>
-                      </li>
+                      <li><a href="imagePage.php">Nahrát Obrázek</a></li>
                       <li><a href="#quests">Questy</a></li>
                       <li><a href="login.php" data-login>Přihlásit se</a></li>
                       <li><a href="register.php" data-login>Zaregistrovat se</a></li>

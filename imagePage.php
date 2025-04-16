@@ -87,30 +87,40 @@
     <div class="content">
         <?php
 
-        echo "<h1>TADYYYYYYYY TARKOV WIKI!!!!!!!!!!</h1>"
-
-
+        echo "<h1>Nahrát Obrázek</h1>
+        <br>
+        <div class='odstavec'>
+            <form action='image.php'>
+                <br><br>
+                <label class='custom-file-upload'>
+                    Vybrat soubor
+                    <input type='file' accept='image/*' onchange='previewImage(event)'>
+                </label>
+                <img id='image-preview' alt='Image preview' style='display: none; max-width: 300px; margin-top: 15px;'>
+                <br>
+                <input type='submit' value='Nahrát' id='submit'>
+            </form>
+        </div>
+        
+        "
 
         ?>
     </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function ()
-        {
-            loadAnimeFromStorage();
-            if (getCookie('userName') !== null)
-            {
-                updateMenu();
-                buttonVisibility();
-            }
-        }
-    );
+    function previewImage(event) {
+        const input = event.target;
+        const preview = document.getElementById('image-preview');
 
-    document.getElementById('search').addEventListener('keyup', function()
-        {
-            filterAnime(this.value);
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+            reader.readAsDataURL(input.files[0]);
         }
-    );
+    }
 </script>
 
 <script src="js/bootstrap.bundle.min.js"></script>
