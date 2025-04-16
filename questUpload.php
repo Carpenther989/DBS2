@@ -85,6 +85,34 @@ else{
         $errorMsg[]= 'chybí obrázek';
     }
 
+if($_SESSION["logged"]==false){
+    $errorMsg[]='uživatel není přihlášen';
+    $formOk = false;
+}
+else{
+    $username = $_SESSION["loggedName"];
+
+
+    $stmt2 = $conn->prepare("SELECT getIDByName(:name)");
+    $stmt2->execute(['name' => $username]);
+    $result = $stmt2->fetch(PDO::FETCH_ASSOC);
+    $firstKey = array_key_first($result);
+    $result = $result[$firstKey];
+
+    $stmt3 = $conn->prepare("SELECT isMod(:userID)");
+    $stmt3->execute(['userID' => $result]);
+    $result2 = $stmt3->fetch(PDO::FETCH_ASSOC);
+    $firstKey = array_key_first($result2);
+    $result2 = $result2[$firstKey];
+    if($result2==0)
+    {
+        $errorMsg[]='nedostatečná oprávnění';
+        $formOk = false;
+    }
+
+
+}
+
 
 if($formOk == true){
 
@@ -98,13 +126,16 @@ if($formOk == true){
         $stmt->execute();
     }
     catch(PDOException $e){
-
+        echo $e->getMessage().' probléms připojením';
     }
 
 }
 else{
-$errorMsg[]='problém při připojení do databáze';
+   var_dump($errorMsg);
 }
 
+echo '<script type="text/javascript">
+           window.location = "index.php";
+      </script>';
 
 ?>

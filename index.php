@@ -93,16 +93,24 @@
 
         <div class="list">
             <ul>
-                <li><a href="#">Debut</a></li>
-                <li><a href="#">Checking</a></li>
-                <li><a href="#">Shootout Picnic</a></li>
-                <li><a href="#">Delivery from the Past</a></li>
-                <li><a href="#">Bad Rep Evidence</a></li>
-                <li><a href="#">Ice Cream Cones</a></li>
-                <li><a href="#">Postman Pat - Part 1</a></li>
-                <li><a href="#">Shaking up the Teller</a></li>
-                <li><a href="#">The Punisher - Part 1</a></li>
-                <li><a href="#">The Punisher - Part 2</a></li>
+
+<?php
+
+global $conn;
+require_once('dbsConnect.php');
+$sql = 'SELECT * from questyjmena';
+foreach ($conn->query($sql) as $row) {
+    print '<li> <a href="content.php?questname='.$row['name'].'">'.$row['name'] . " </a></li>";
+
+}
+
+
+
+
+
+
+?>
+
             </ul>
         </div>
     </div>

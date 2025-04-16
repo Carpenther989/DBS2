@@ -87,7 +87,6 @@
     <div class="content">
         <?php
 
-        echo "<h1>TADYYYYYYYY TARKOV WIKI!!!!!!!!!!</h1>"
 
 
 
