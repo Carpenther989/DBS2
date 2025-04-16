@@ -124,6 +124,10 @@ if($formOk == true){
         $stmt->bindParam(':questMoney', $questMoney);
         $stmt->bindParam(':image', $imageContent,PDO::PARAM_LOB);
         $stmt->execute();
+
+        echo '<script type="text/javascript">
+           window.location = "index.php";
+      </script>';
     }
     catch(PDOException $e){
         echo $e->getMessage().' probléms připojením';
@@ -134,8 +138,7 @@ else{
    var_dump($errorMsg);
 }
 
-echo '<script type="text/javascript">
-           window.location = "index.php";
-      </script>';
+
+
 
 ?>
