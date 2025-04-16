@@ -7,16 +7,44 @@ $formOk = false;
 $questname='default';
 $questXP=1;
 $questMoney=1;
-$qestDecr='default description, pokud tohle vidíte něco se pokazilo';
+$questDscr='default description, pokud tohle vidíte něco se pokazilo';
 $imageContent=null;
-if( isset($_POST['questname']) )
+if( isset($_POST['name']) )
 {
-    $questname = $_POST['questname'];
+    $questname = $_POST['name'];
 
 }
 else{
     $errorMsg[]="chybí název questu";
 }
+
+if( isset($_POST['xp']) )
+{
+    $questXP = $_POST['xp'];
+
+}
+else{
+    $errorMsg[]="chybí xp";
+}
+
+if( isset($_POST['reward']) )
+{
+    $questMoney = $_POST['reward'];
+
+}
+else{
+    $errorMsg[]="chybí moni";
+}
+
+if( isset($_POST['description']) )
+{
+    $questDscr = $_POST['description'];
+
+}
+else{
+    $errorMsg[]="chybí popis";
+}
+
 
 
 
@@ -67,6 +95,7 @@ if($formOk == true){
         $stmt->bindParam(':questXP', $questXP);
         $stmt->bindParam(':questMoney', $questMoney);
         $stmt->bindParam(':image', $imageContent,PDO::PARAM_LOB);
+        $stmt->execute();
     }
     catch(PDOException $e){
         echo $e->getMessage();
@@ -77,5 +106,5 @@ else{
 $errorMsg[]='problém při připojení do databáze';
 }
 
-
+var_dump($errorMsg);
 ?>
