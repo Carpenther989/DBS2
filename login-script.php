@@ -1,24 +1,13 @@
 <?php
 session_start();
+global $conn;
+require_once('dbsConnect.php');
 if($_SESSION["logged"]==true){
     echo '<script type="text/javascript">
            window.location = "index.php";
       </script>';
 }
 //------------------------------------
-$host = "localhost";
-$user = "frantaVomacka";
-$password = "kekw";
-$dbname = "tarkov_wiki";
-try {
-    $conn = new pdo("mysql:host=$host;dbname=$dbname", $user, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo ":)";
-}
-catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-//---------------------------------
 
 $name='testUser';
 $password='';

@@ -94,7 +94,7 @@
                 <br><br>
                 <label class='custom-file-upload'>
                     Vybrat soubor
-                    <input type='file' accept='image/*' onchange='previewImage(event)'>
+                    <input type='file' accept='image/*' name='image' onchange='previewImage(event)'>
                 </label>
                 <img id='image-preview' alt='Image preview' style='display: none; max-width: 300px; margin-top: 15px;'>
                 <br>
