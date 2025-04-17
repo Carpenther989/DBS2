@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:11.7.2
+    container_name: tarkov_wiki
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: tarkov_wiki
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
