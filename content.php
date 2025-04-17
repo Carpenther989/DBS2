@@ -11,45 +11,13 @@
     <script src="js/cookieManager.js"></script>
 </head>
 <body>
-<div class="modal fade" id="modal_addAnime" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5">Správa anime</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form class="row g-3" id="anime_form">
-                    <div class="col-md-12">
-                        <label for="input_name" class="form-label">Název</label>
-                        <input type="text" class="form-control" id="input_name" name="name">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="input_seasons" class="form-label">Počet sezón</label>
-                        <input type="number" class="form-control" id="input_seasons" name="seasons">
-                    </div>
-                    <div class="col-6">
-                        <label for="input_episodes" class="form-label">Počet epizod per sezónu</label>
-                        <input type="number" class="form-control" id="input_episodes" name="episodes">
-                    </div>
-                    <div class="col-12">
-                        <label for="input_description">Popis</label>
-                        <textarea class="form-control" name="description" id="input_description"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-outline-primary">Přidat anime</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+
 <header>
     <nav class="header-top">
         <div id="brand">
-            <button type="button" id="logo" class="btn btn-light" data-dl-toggle>
-                <i class="fa fa-sun"></i>
-            </button>
+
+            <i class="fa fa-sun"></i>
+
 
         </div>
         <div id="menu">
@@ -112,28 +80,6 @@ WHERE quest.questname=:qwest;");
         ?>
     </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function ()
-        {
-            loadAnimeFromStorage();
-            if (getCookie('userName') !== null)
-            {
-                updateMenu();
-                buttonVisibility();
-            }
-        }
-    );
 
-    document.getElementById('search').addEventListener('keyup', function()
-        {
-            filterAnime(this.value);
-        }
-    );
-</script>
-
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/userRecognition.js"></script>
-<script src="js/documentListener.js"></script>
-<script src="js/formListener.js"></script>
 </body>
 </html>
