@@ -58,7 +58,7 @@
         require_once('dbsConnect.php');
         $questname = $_GET['questname'];
         echo '<h1>'.$questname.'</h1> <br>';
-        echo 'popis :<br>';
+        echo '<br>';
         $stmt = $conn->prepare("SELECT quest.questname AS 'name',
  descr.descText AS 'popis',
  quest.xp_earned AS 'xp',
@@ -73,9 +73,9 @@ WHERE quest.questname=:qwest;");
         echo '<img src="data:image/jpeg;base64,'.base64_encode($result['img']).'"/><br>';
         echo 'popis :<br>';
         echo $result['popis'];
-
-
-
+        echo '<br>';
+        echo 'xp : '.$result['xp'].'<br>';
+        echo 'finančí odměna : '.$result['moni'].' rublů blyat';
 
         ?>
     </div>
